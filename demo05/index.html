@@ -11,13 +11,13 @@
       var NotesList = React.createClass({
         render: function() {
           return (
-            <ol>
+            <ul>
               {
-                React.Children.map(this.props.children, function (child) {
-                  return <li>{child}</li>;
+                React.Children.map(this.props.children, item=> {
+                  return <li>{item}</li>;
                 })
               }
-            </ol>
+            </ul>
           );
         }
       });

@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <script src="../build/react.js"></script>
     <script src="../build/react-dom.js"></script>
     <script src="../build/browser.min.js"></script>
-  </head>
-  <body>
-    <div id="example"></div>
-    <script type="text/babel">
-      var HelloMessage = React.createClass({
-        render: function() {
-          return <h1>Hello {this.props.name}</h1>;
+</head>
+<body>
+<div id="example"></div>
+<div id="example1"></div>
+<script type="text/babel">
+    let TestClass = React.createClass({
+        render: function () {
+            return <span>what ever {this.props.parse}</span>;
         }
-      });
+    })
 
-      ReactDOM.render(
-        <HelloMessage name="John" />,
+    var HelloMessage = React.createClass({
+        render: function () {
+            return <h1>Hello {this.props.name}</h1>;
+        }
+    });
+
+    ReactDOM.render(
+            <TestClass parse="shit"/>,
+        document.getElementById('example1')
+    );
+
+    ReactDOM.render(
+            <HelloMessage name="John"/>,
         document.getElementById('example')
-      );
-    </script>
-  </body>
+    );
+</script>
+</body>
 </html>
