@@ -9,12 +9,14 @@
     <div id="example"></div>
     <script type="text/babel">
 
-      var data = 123;
+      var data = '123';
 
       var MyTitle = React.createClass({
         propTypes: {
           title: React.PropTypes.string.isRequired,
         },
+
+        //there will be warning in the web console
 
         render: function() {
           return <h1> {this.props.title} </h1>;
