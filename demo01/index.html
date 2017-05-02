@@ -7,11 +7,17 @@
   </head>
   <body>
     <div id="example"></div>
+    <div class="test"></div>
+    <div class="test"></div>
     <script type="text/babel">
       ReactDOM.render(
         <h1>Hello, world!</h1>,
         document.getElementById('example')
       );
+      ReactDOM.render(
+              <p>test</p>,
+          document.getElementsByClassName('test')[0]
+      )
     </script>
   </body>
 </html>
